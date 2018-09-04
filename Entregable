@@ -1,0 +1,140 @@
+#include <iostream>
+
+/*1. Declare una cadena de caracteres llamada my_string utilizando un puntero */
+
+int main()
+
+
+{
+
+char *my_string= "Hola";
+std::cout<<"Cadena my_string: ";
+std::cout<<my_string<<std::endl;
+
+
+    
+
+
+
+//std::cout<<"Cadena my_string: ";
+//std::cout<< /*Aqui va la cadena my_string */ <<std::endl;
+
+//*2. Declare una estructura global con 6 miembros de distinto tipo y en este orden (con sus miembros inicializados):
+struct M
+{
+int val1=0;
+char val2 = 'c';
+float val3= 4.05;
+char val4='b';
+double val5=7.9999 ;
+int val6= 9;
+}valstruct1;
+
+struct M2
+// Declare otra estructura global con 6 miembros de distinto tipo y en este orden (con sus miembros inicializados):
+{
+int val7=1;
+int val8=2;
+float val9=4.2;
+char val10='c';
+char val11='d';
+double val12=4.555;
+
+}valstruct7;
+
+
+M2 *ptr1= &valstruct7;
+M *ptr2= &valstruct1;
+std::cout<<&valstruct1<<std::endl;
+std::cout<<&valstruct7<<std::endl;
+}
+
+
+void foo_function(void)
+{
+    
+char a ='camino al cielo';
+int *ptraritmetico = nullptr;
+ptr1 = &a; // Apuntando ptr1 a la variable a
+ptraritmetico+=1; // Aumentando la direccion guardada en ptr1     
+    
+}
+//Declare punteros a cada una de las estructuras e imprima en pantalla el valor de sus miembros haciendo uso
+//del operador ->
+//Luego imprima de nuevo el valor de los miembros de la estructura pero esta vez haga uso de "type casting",
+//operadores y aritmetica de punteros
+//Calcule el tamaC1o de cada estructura con la funcion sizeof() y explique en un comentario sus observaciones
+//acerca del resultado obtenido respecto a los tamanios de las estructuras
+
+/*3.Agregue a la funcion foo_function() un arreglo unidimensional del tipo y del tamanio que ud prefiera.
+ * Declare un puntero al arreglo y luego agregue las lineas de codigo necesarias para lograr que cada vez que
+ * se haga un llamado a la funcion foo_function() dentro de la funcion main se imprima un elemento del arreglo
+ * (en el orden que estan en el arreglo) con ayuda de la aritmetica de punteros.
+ */
+
+/* Enlaces de internet utiles:
+ * http://c.conclase.net/curso/index.php?cap=011
+ * http://c.conclase.net/curso/index.php?cap=011b#STR_sizeof
+ * https://stackoverflow.com/questions/8657776/pointer-arithmetic-with-structures
+ * https://stackoverflow.com/questions/119123/why-isnt-sizeof-for-a-struct-equal-to-the-sum-of-sizeof-of-each-member
+ * http://www.catb.org/esr/structure-packing/
+ * https://www.geeksforgeeks.org/structure-member-alignment-padding-and-data-packing/
+ */
+
+//void foo_function(void); //Esta declaracion dejela tal y como esta
+
+void foo_function(void); //Esta declaracion dejela tal y como esta
+void Init_Fifo(void); //Esta declaracion dejela tal y como esta
+void Escribe_Fifo(void); //Esta declaracion dejela tal y como esta
+void Lee_Fifo(void); //Esta declaracion dejela tal y como esta
+
+int main()
+{
+	
+	//Agregue su codigo aqui
+int fifo[20];  
+int Escritura;
+int Lectura;
+static int *PtrEscritura=NULL;
+static int *PtrLectura=NULL;
+
+
+
+
+    //Aqui puede agregar mas llamadas a function1.....
+    foo_function();
+	
+	//Aqui puede realizar escrituras y lecturas de su FIFO...
+	Init_Fifo();
+	//Escribe_Fifo();
+	//Lee_Fifo();
+	
+
+}
+
+void foo_function(void)
+{
+	//Su codigo aqui
+    std::cout<<"a"<<std::endl;
+    //Su codigo aqui tambien si quiere
+}
+void Init_Fifo(void)
+{
+    //Aqui va la incializacion de los punteros
+    *PtrEscritura = &fifo[0];
+    *PtrLectura = &fifo[0];
+}
+
+void Escribe_Fifo(void)
+{
+    
+
+
+    //Aqui agregue la logica para la escritura de la FIFO
+
+}
+
+void Lee_Fifo(void)
+{
+    //Aqui agregue la logica para la lectura de la FIFO
+}
